@@ -1,41 +1,9 @@
 # Adaptive Cascade Clustering for Urban Traffic Flow Analysis
 
-This repository implements the research from the article:
-
-> **Establishing patterns of urban traffic flows using an adaptive cascade clustering approach**  
-> _Vitaliy Pavlyshyn, Eduard Manziuk, Oleksander Barmak, Pavlo Radiuk, Iurii Krak_  
-> *Sustainability, 2025 (under review)*
-
----
-
-## Overview
-
 This repository contains the implementation necessary to reproduce the research presented in the article  
 **"Establishing patterns of urban traffic flows using an adaptive cascade clustering approach"**.
 
 The main goal of the study is to improve the identification of traffic modes in urban environments by using an adaptive combination of HDBSCAN and KMeans algorithms with automatic parameter tuning and strategy selection based on clustering quality criteria.
-
-### Core Features
-
-- **Time Window Representation:** The traffic network is divided into fixed-length time windows. Each window is described by a feature vector that includes:
-  - Average traffic flow across intersections
-  - Standard deviation and variability
-  - Rate of change in flow
-  - Temporal dependencies (autocorrelation)
-
-- **Cascade Clustering Pipeline:**
-  - **HDBSCAN** is used to detect underlying structure and outliers with automatic parameter selection.
-  - **KMeans** is applied using HDBSCAN centroids for improved compactness and boundary clarity.
-  - A **weighted voting system** selects the best result based on cluster validity metrics (e.g., V-measure, ARI, silhouette score).
-
-- **Adaptive Strategy Selection:** The system dynamically chooses between:
-  - **HDBSCAN-first** (for noisy or heterogeneous data)
-  - **KMeans-first** (for well-structured, low-noise data)
-  - **Hybrid mode** (when data characteristics are intermediate)
-
-- **Validation:** The approach is validated through experiments on a SUMO simulation model of Khmelnytskyi, Ukraine. The system successfully detects key transport patterns (e.g., peak hours, low-activity periods) and preserves time coherence in cluster assignments.
-
-This framework lays the foundation for real-time, adaptive, and environmentally-aware urban traffic control systems.
 
 ---
 
