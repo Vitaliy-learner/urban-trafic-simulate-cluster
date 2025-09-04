@@ -112,3 +112,10 @@ pip install -r Clustering/requirements.txt
 **For C# (`SumoLauncher/`, `DataTransformation/`)**:
 - .NET Framework 4.7.2+ or .NET Core 3.1+
 - Visual Studio or `dotnet` CLI
+
+
+---
+
+## Based On Real Traffic Data
+
+The study is based on real traffic data obtained through the processing of visual information from key intersections of the city of Khmelnytskyi using computer vision. These empirical data were integrated into the high-precision simulation model SUMO to provide a controlled experimental environment with known ground-truth scenarios, which enabled an objective validation of clustering algorithms. This hybrid approach combines the reliability of real traffic flows with the advantages of detailed analysis and experimental reproducibility.
